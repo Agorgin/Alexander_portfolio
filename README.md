@@ -1,5 +1,5 @@
 # Alexander's Data Science Portfolio
-This is my data science portfolio! Here, I will be giving and overview of an showcase the academic projects I have done
+This is my data science portfolio! Here, I will be giving and overview of and showcase the academic projects I have done
 
 
 # Project: Air France Business Case 
