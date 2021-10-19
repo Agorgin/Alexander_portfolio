@@ -4,13 +4,13 @@ This is my data science portfolio! Here, I will be giving an overview of an show
 
 # Project: Air France Business Case 
 This is my first project on the Air France business case
-*Test
-*Test
-*asd
-*asd
-*as
-*asd
-*asd
+* Test
+* Test
+* asd
+* asd
+* as
+* asd
+* asd
 
 
 
