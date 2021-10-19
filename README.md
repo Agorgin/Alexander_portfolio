@@ -1,4 +1,4 @@
-# Alexander_portfolio
+# Alexander's Data Science Portfolio
 This is my data science portfolio! Here, I will be giving and overview of an showcase the academic projects I have done
 
 
