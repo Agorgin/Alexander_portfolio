@@ -2,7 +2,7 @@
 This is my data science portfolio! Here, I will be giving and overview of and showcase the academic projects I have done
 
 
-# [Project 1: Air France](www.wsj.com) <-- test
+# [Project 1: Air France](https://github.com/Agorgin/Air-france-business-case) <-- test
 This is my first project on the Air France business case using R!
 * Test
 * Test
