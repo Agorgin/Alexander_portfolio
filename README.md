@@ -4,7 +4,9 @@ This is my data science portfolio! Here, I will be giving and overview of and sh
 
 # [Project 1: Air France](https://github.com/Agorgin/Air-france-business-case)
 
-![Frontpage](https://github.com/Agorgin/Air-france-business-case/blob/main/Screenshot%202021-11-07%20at%205.10.44%20PM.png)
+![GitHub Logo](/Users/alexandergorgin/Desktop/presentation/frontpage.png
+
+
 
 This is my first project on the Air France business case using R!
 
