@@ -5,7 +5,7 @@ This is my data science portfolio! Here, I will be giving an overview of and sho
 
 This is my first project on the Air France business case using R!
 
-![Title Image](https://github.com/Agorgin/Alexander_portfolio/blob/main/titleimage.jpg)
+![Title Image](https://github.com/Agorgin/Alexanderportfolio/blob/main/titleimage.jpg "hej")
 
 
 My team and I analyzed Air France's international marketing campaigns and have generated recommendations for effective search engine marketing.
