@@ -6,8 +6,6 @@ This is my data science portfolio! Here, I will be giving an overview of and sho
 This is my first project on the Air France business case using R!
 
 
-![Image of ](https://github.com/Agorgin/Alexander_portfolio/blob/main/IMG_2984(2).jpg)
-
 My team and I analyzed Air France's international marketing campaigns and have generated recommendations for effective search engine marketing.
 
 The dataset is sources from the case study on Air France International Marketing by Kellog School of Business. The external libraries used are readxl, dplyr, plotly, ggplot2, tidyverse.
