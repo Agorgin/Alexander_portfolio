@@ -4,7 +4,7 @@ This is my data science portfolio! Here, I will be giving and overview of and sh
 
 # [Project 1: Air France](https://github.com/Agorgin/Air-france-business-case)
 
-![GitHub Logo](Screenshot 2021-11-07 at 5.35.23 PM.png)
+![GitHub Log](Screenshot 2021-11-07 at 5.35.23 PM.png)
 
 
 
