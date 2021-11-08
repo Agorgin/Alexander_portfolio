@@ -43,7 +43,7 @@ logistic_income <- glm(binary  ~  CC_norm +  Impressions_norm +
 
 ```
 
-###Creating a GINI decision tree
+### Creating a GINI decision tree
 
 ```markdown
 
@@ -56,7 +56,7 @@ my_tree <- rpart(binary~  CC + Impressions +
 rpart.plot(my_tree, extra = 1, type = 1) 
 
 ```
-
+![GINI Tree](https://github.com/Agorgin/Alexander_portfolio/blob/main/titleimage.jpg)
 
 
 
