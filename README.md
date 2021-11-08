@@ -21,7 +21,20 @@ Lastly, we shared our findings a 6 minute presentation in form of a video presen
 
 ```markdown
 
-test
+#Creating binaries assigning Profit (1) non profit (2)              
+
+netincome <- airfrance$netincome #create new vector
+binary_income <- netincome
+binary_income[binary_income < 0] <- 0 #negative values are 0
+binary_income[binary_income > 0] <- 1 #positive values are 1
+View(binary_income)
+
+airfrance$binary <- binary_income #assign the vector to the data frame
+
+#Splitting into training and testing
+train_index <- sample(1:nrow(airfrance), size = 0.8*nrow(airfrance)) #training sample
+train_data <- airfrance[train_index, ] #store into dataset
+test_data <- airfrance[-train_index,] #exclude the train dataset for test data
 
 
 ```
