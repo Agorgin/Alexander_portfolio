@@ -4,7 +4,7 @@ This is my data science portfolio! Here, I will be giving and overview of and sh
 
 # [Project 1: Air France](https://github.com/Agorgin/Air-france-business-case)
 
-![airfrance](https://github.com/Agorgin/Alexander_portfolio/main/airfrance.png)
+![airfrance](https://github.com/Agorgin/Alexander_portfolio/blob/main/airfrance.png)
 
 
 
