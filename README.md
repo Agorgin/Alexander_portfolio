@@ -7,9 +7,11 @@ This is my first project on the Air France business case using R!
 
 ![Title Image](https://github.com/Agorgin/Alexander_portfolio/blob/main/final.png)
 
+
+
 My team and I analyzed Air France's international marketing campaigns and have generated recommendations for effective search engine marketing.
 
-The dataset is sources from the case study on Air France International Marketing by Kellog School of Business. The external libraries used are readxl, dplyr, plotly, ggplot2, tidyverse.
+The dataset is sources from the case study on Air France International Marketing by Kellog School of Business. The external libraries used are readxl, mlbench, dplyr, plotly, ggplot2, tidyverse.
 
 The project employs visual and statistical tools in R and applies a strategy for missing values. Additionally, my team added important metrics for subsequent analysis, i.e. return on advertisement and net income.
 
