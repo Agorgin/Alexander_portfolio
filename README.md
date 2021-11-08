@@ -56,7 +56,7 @@ my_tree <- rpart(binary~  CC + Impressions +
 rpart.plot(my_tree, extra = 1, type = 1) 
 
 ```
-![GINI Tree](https://github.com/Agorgin/Alexander_portfolio/blob/main/titleimage.jpg)
+![GINI Tree](https://github.com/Agorgin/Alexander_portfolio/blob/main/Screenshot%202021-11-08%20at%2012.35.02%20AM.png)
 
 
 
