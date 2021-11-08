@@ -5,7 +5,7 @@ This is my data science portfolio! Here, I will be giving an overview of and sho
 
 This is my first project on the Air France business case using R!
 
-![Title Image](https://github.com/Agorgin/Alexander_portfolio/blob/main/final.png)
+![Title Image](https://github.com/Agorgin/Alexander_portfolio/blob/main/titleimage.jpg)
 
 
 
