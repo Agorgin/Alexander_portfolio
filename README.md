@@ -81,3 +81,16 @@ From the Gini tree we can determine that Amount and Click Charges are the variab
 # Conclusion
 Prioritize the Publisher and Match type that give us the highest ROA and Net income: MSN Global, Yahoo-US, and Google-Global and Exact match types
 Furthermore, by analyzing the GINI tree, all of the searches that give less that $100 in revenues should be dropped, as well as those with particularly high Click Charges. 
+
+
+
+
+# [Project 2: Business Insight Report - NLP ](https://github.com/Agorgin/Air-france-business-case)
+UPCOMING: This project will analyze text data in R using at least 2 frameworks: N-grams, sentiment analysis, tf-idf, correlograms, classification with Bayes, LDA, .etc).
+
+Report is under construction and will be released December 8th 2021
+
+
+
+
+
