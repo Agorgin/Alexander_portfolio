@@ -18,7 +18,7 @@ Then, my team used descriptive analysis to identify the most effect marketing ch
 
 Lastly, we shared our findings a 6 minute presentation in form of a video presentation. Below are important code snippets from the projects:
 
-### Logistic regression
+## Logistic regression
 ```markdown
 #
 #Creating binaries assigning Profit (1) non profit (2)              
@@ -42,7 +42,7 @@ logistic_income <- glm(binary  ~  CC_norm +  Impressions_norm +
                          AP_norm + Amount_norm + TC_norm + TVB_norm , data = train_data, family = binomial) #training the regression
 
 ```
-## Insight
+### Insight
 Moving to a more predictive part of our analysis, we built a model we can then use to test possible future strategies to see whether we can expect them to be successful in meeting our objective of positive net income. So we defined a positive net income as 1 (business success) and negative net income as 0 (business failure)
 
 What we did was first clear any highly correlated variables among them to avoid collinearity,  we normalize the dataset since we were dealing with different units and ranges, we ran the regression a number of  times and we kept working with it to see what was the best combination to explain the behaviour of net income.
@@ -52,7 +52,7 @@ Overall, very briefly going through our conclusion is that the normalised model 
 
 
 
-### Creating a GINI decision tree
+## Creating a GINI decision tree
 
 ```markdown
 
@@ -66,7 +66,7 @@ rpart.plot(my_tree, extra = 1, type = 1)
 
 ```
 ![GINI Tree](Screenshot%202021-11-08%20at%2012.35.02%20AM.png)
-
+### Insight
 Amount being the most relevant variable, it’s the first one on the tree. If the amount of the transaction is less than 100, then there is a 100% probability that the net income is going to be negative. 
 
 The second most relevant variable is Click Charges. If Amount is bigger than 100 and Click Charges is less than 1357, there is 98%  probability of having a positive net income.
