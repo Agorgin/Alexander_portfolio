@@ -18,6 +18,8 @@ Then, my team used descriptive analysis to identify the most effect marketing ch
 
 Lastly, we shared our findings a 6 minute presentation in form of a video presentation. Below are important code snippets from the projects:
 
+
+
 # Logistic regression
 ```markdown
 
