@@ -18,9 +18,9 @@ Then, my team used descriptive analysis to identify the most effect marketing ch
 
 Lastly, we shared our findings a 6 minute presentation in form of a video presentation. Below are important code snippets from the projects:
 
-## Logistic regression
+# Logistic regression
 ```markdown
-#
+
 #Creating binaries assigning Profit (1) non profit (2)              
 
 netincome <- airfrance$netincome #create new vector
@@ -52,7 +52,7 @@ Overall, very briefly going through our conclusion is that the normalised model 
 
 
 
-## Creating a GINI decision tree
+# GINI decision tree
 
 ```markdown
 
