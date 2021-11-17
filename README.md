@@ -21,7 +21,7 @@ Lastly, we shared our findings a 6 minute presentation in form of a video presen
 # Match type and Publisher Name
 The two variables used to measure business success are Match Type and Publisher Name.
 
-## Match type
+### Match type
 Match Type fall under the categories
 * Advanced
 * Broad
@@ -30,7 +30,7 @@ Match Type fall under the categories
 
 These can tell us how accurate was the match based on the Keyword, and is the one of the two metrics to define the future strategy. 
 
-## Publisher
+### Publisher
 These can tell us which publisher perform the best, to narrow down the strategy and increase efficiency. 
 * Yahoo US and Global
 * MSN US and Global
