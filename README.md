@@ -71,7 +71,7 @@ rpart.plot(my_tree, extra = 1, type = 1)
 ### Insight
 Amount being the most relevant variable, it’s the first one on the tree. If the amount of the transaction is less than 100, then there is a 100% probability that the net income is going to be negative. 
 
-The second most relevant variable is Click Charges. If Amount is bigger than 100 and Click Charges is less than 1357, there is 98%  probability of having a positive net income.
+The second most relevant variable is Click Charges (CC). If Amount is bigger than 100 and Click Charges is less than 1357, there is 98%  probability of having a positive net income.
 
 From the Gini tree we can determine that Amount and Click Charges are the variables that mainly influence the outcome.
 
@@ -79,7 +79,12 @@ From the Gini tree we can determine that Amount and Click Charges are the variab
 
 
 # Conclusion
-Prioritize the Publisher and Match type that give us the highest ROA and Net income: MSN Global, Yahoo-US, and Google-Global and Exact match types
+Prioritize the Publisher and Match type that give us the highest ROA and Net income: 
+* Yahoo-US
+* Google-Global
+* MSN Global
+* Match type of exact
+
 Furthermore, by analyzing the GINI tree, all of the searches that give less that $100 in revenues should be dropped, as well as those with particularly high Click Charges. 
 
 
