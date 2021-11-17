@@ -67,7 +67,7 @@ my_tree <- rpart(binary~  CC + Impressions +
 rpart.plot(my_tree, extra = 1, type = 1) 
 
 ```
-![GINI Tree](Screenshot%202021-11-08%20at%2012.35.02%20AM.png)
+![GINI Tree](https://github.com/Agorgin/Alexander_portfolio/blob/main/Screenshot%202021-11-16%20at%2011.26.12%20PM.png)
 ### Insight
 Amount being the most relevant variable, it’s the first one on the tree. If the amount of the transaction is less than 100, then there is a 100% probability that the net income is going to be negative. 
 
