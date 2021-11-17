@@ -70,8 +70,20 @@ logistic_income <- glm(binary  ~  CC_norm +  Impressions_norm +
 ### Insight
 Moving to a more predictive part of our analysis, we built a model we can then use to test possible future strategies to see whether we can expect them to be successful in meeting our objective of positive net income. So we defined a positive net income as 1 (business success) and negative net income as 0 (business failure)
 
-What we did was first clear any highly correlated variables among them to avoid collinearity,  we normalize the dataset since we were dealing with different units and ranges, we ran the regression a number of  times and we kept working with it to see what was the best combination to explain the behaviour of net income.
+First we cleared any highly correlated variables among them to avoid collinearity,  we normalized the dataset since we were dealing with different units and ranges, we ran the regression a number of times and we kept working with it to see what was the best combination to explain the behaviour of net income. Bleow is a snippet of using a User Defined Function to normaliz our data:
 
+```markdown
+#Normalizing data with a UDF
+normal <- function(x){(x-min(x)) / (max(x)-min(x)) }
+
+#Normalizing our data
+train_data$CC_norm <- normal(train_data$CC) 
+train_data$Impressions_norm <- normal(train_data$Impressions) 
+train_data$AP_norm <- normal(train_data$AP) 
+train_data$Amount_norm <- normal(train_data$Amount) 
+train_data$TC_norm <- normal(train_data$TC) 
+train_data$TVB_norm <- normal(train_data$TVB) 
+```
 Overall, very briefly going through our conclusion is that the normalised model we reached signals our variables to be significant at a 90% confidence level and the most influential coefficients in terms of their marginal effect on success were Average positioning in a (–) way and Volume of bookings in a (+)
 
 
