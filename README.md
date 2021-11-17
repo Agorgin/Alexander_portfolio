@@ -18,7 +18,31 @@ Then, my team used descriptive analysis to identify the most effect marketing ch
 
 Lastly, we shared our findings a 6 minute presentation in form of a video presentation. Below are important code snippets from the projects:
 
+# Match type and Publisher Name
+The two variables used to measure business success are Match Type and Publisher Name.
 
+## Match type
+Match Type fall under the categories
+* Advanced
+* Broad
+* Exact
+* Standard 
+
+These can tell us how accurate was the match based on the Keyword, and is the one of the two metrics to define the future strategy. 
+
+## Publisher
+These can tell us which publisher perform the best, to narrow down the strategy and increase efficiency. 
+* Yahoo US and Global
+* MSN US and Global
+* Google US and global
+* Overture US and Global
+* Kayak
+
+# Insights from plots
+To be inserted. Page will be updated Friday November 19th 2021
+
+
+# Plots
 
 # Logistic regression
 ```markdown
