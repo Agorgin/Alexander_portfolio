@@ -40,7 +40,7 @@ These can tell us how accurate was the match based on the Keyword, and is the on
 These can tell us which publisher perform the best, to narrow down the strategy and increase efficiency. 
 
 # Insights from plots
-To be inserted. Page will be updated Friday November 19th 2021
+To be inserted.
 
 
 # Logistic regression
