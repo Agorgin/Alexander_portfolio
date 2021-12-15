@@ -256,7 +256,7 @@ ggplot(frequency, aes(x=proportion, y=`Apartment`,
 
 ```
 
-![Title Image](titleimage.jpg)
+![Correlgram](Correlgram.png)
 
 
 
