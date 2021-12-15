@@ -258,5 +258,120 @@ ggplot(frequency, aes(x=proportion, y=`Apartment`,
 
 ![Correlgram](Correlgram.png)
 
+### Insight
+
+When we plot the correlograms against the Benchmark Apartment, we find out that property types have one thing in common: They are clean. If we look at the differences between the group, we notice a lot of different names. Those are probably the names of the hosts which make the analysis more difficult.
+
+
+
+# Sentiment Analysis - BING
+```markdown
+library(tidyr)
+comment_sentiment <- tidy_comment_no_stop %>%
+  inner_join(get_sentiments("bing")) %>%
+  filter(property_type %in% c("House", "Apartment", "Condominium")) %>% 
+  count(property_type, index = linenumber %/% 20, sentiment) %>%
+  pivot_wider(names_from = sentiment, values_from = n, values_fill = 0) %>% 
+  mutate(sentiment = positive - negative)
+
+library(ggplot2)
+
+ggplot(comment_sentiment, aes(index, sentiment, fill = property_type)) +
+  geom_col(show.legend = FALSE)+
+  facet_wrap(~property_type, ncol = 2, scales = "free_x") + labs(title="Bing Library")
+```
+
+![bing](bing.png)
+
+### Insight
+
+There are different libraries available to categorize words into sentiments. The bing library gives us a binary variable telling us if the given word is rather positive or negative. We summed up the sentiment scores grouped into baskets of 20 reviews. All of those basket appear to have a overall positive sentiment.
+
+Most of the Condominiums are clean and nice so that customers would recommend to stay there. They had a really comfortable and amazing experience and a helpful host. Other guests experienced some issues, mostly related to noise.
+
+
+
+# Contribution to Sentiment: 
+
+## House
+
+```markdown
+####### 2.2 House ######
+bing_word_counts_house <- tidy_comment_no_stop %>%
+  filter(property_type == "House") %>% 
+  inner_join(get_sentiments("bing")) %>% 
+  count(word, sentiment, sort = TRUE) %>% 
+  ungroup()
+  
+  #plotting
+  bing_word_counts_house %>% 
+  group_by(sentiment) %>% 
+  slice_max(n, n = 10) %>% 
+  ungroup() %>% 
+  mutate(word = reorder(word, n)) %>% 
+  ggplot(aes(n, word, fill = sentiment))+
+  geom_col(show.legend = FALSE)+
+  facet_wrap(~sentiment, scales = "free_y")+
+  labs(x = "Contribution to sentiment (House)", y = NULL)
+
+```
+
+![contribution house](contribution house.png)
+
+### Insight
+Some Houses also seemed to be noise and cold. The houses are overall very clean, comfortable and nice. Most guest had an amazing and wonderful stay. We get similar results for the Apartment as well.
+
+
+## Apartment
+
+``` markdown
+####### 2.3 Apartment ######
+bing_word_counts_apartment <- tidy_comment %>% 
+  filter(property_type == "Apartment") %>% 
+  inner_join(get_sentiments("bing")) %>% 
+  count(word, sentiment, sort = TRUE) %>% 
+  ungroup()
+```
+
+```markdown
+bing_word_counts_apartment %>% 
+  group_by(sentiment) %>% 
+  slice_max(n, n = 10) %>% 
+  ungroup() %>% 
+  mutate(word = reorder(word, n)) %>% 
+  ggplot(aes(n, word, fill = sentiment))+
+  geom_col(show.legend = FALSE)+
+  facet_wrap(~sentiment, scales = "free_y")+
+  labs(x = "Contribution to sentiment (Apartment)", y = NULL)
+
+```
+![contribution apartment](contribution apartment.png)
+
+
+## House, Apartment, Condominium Combined
+
+```markdown
+####### 2.4 - All 3 ######
+bing_word_counts_all <- tidy_comment %>% 
+  filter(property_type %in% c("House", "Apartment", "Condominium")) %>% 
+  inner_join(get_sentiments("bing")) %>% 
+  count(word, sentiment, sort = TRUE) %>% 
+  ungroup()
+```
+
+```markdown
+bing_word_counts_all %>% 
+  group_by(sentiment) %>% 
+  slice_max(n, n = 10) %>% 
+  ungroup() %>% 
+  mutate(word = reorder(word, n)) %>% 
+  ggplot(aes(n, word, fill = sentiment))+
+  geom_col(show.legend = FALSE)+
+  facet_wrap(~sentiment, scales = "free_y")+
+  labs(x = "Contribution to sentiment (House, Condominium, Apartment)", y = NULL)
+
+```
+![combined](combined.png)
+
 
 
