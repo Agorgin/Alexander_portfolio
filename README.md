@@ -128,9 +128,135 @@ Furthermore, by analyzing the GINI tree, all of the searches that give less that
 # [Project 2: Business Insight Report - NLP ](https://github.com/Agorgin/Air-france-business-case)
 UPCOMING: This project will analyze text data in R using at least 2 frameworks: N-grams, sentiment analysis, tf-idf, correlograms, classification with Bayes, LDA, .etc).
 
-Report is under construction and will be released December 8th 2021
 
 
+```markdown
+
+# Import the libraries
+library(tidytext)
+library(tidyverse)
+library(tidyr)
+library(tidytuesdayR)
+library(stringr)
+library(textreadr)
+library(pdftools)
+library(textshape)
+library(twitteR)
+library(tm)
+library(ggplot2)
+library(scales)
+library(magrittr)
+library(dplyr)
+library(gutenbergr)
+library(Matrix)
+library(textdata)
+library(igraph)
+library(ggraph)
+library(widyr)
+library(topicmodels)
+library(gutenbergr)
+library(quanteda)
+library(quanteda.textmodels)
+library(RColorBrewer)
+library(readr)
+
+```
+
+#Data Wrangling
+```markdown
+df_comment <- read_csv("/Users/johndinh/Documents/GitHub/AirBnB/Assets/reviewer_comments.csv")
+
+df_names <- read_csv("/Users/johndinh/Documents/GitHub/AirBnB/Assets/stop_name.csv")
+
+df_names$word <- tolower(df_names$word)
+
+custom_stop_words <- tribble(
+  ~word, ~lexicon,
+  "http", "CUSTOM",
+  "https", "CUSTOM",
+  "t.co", "CUSTOM",
+  "apartment", "CUSTOM",
+  "de", "CUSTOM",
+  "à", "CUSTOM",
+  "的", "CUSTOM",
+  "la", "CUSTOM",
+  "très", "CUSTOM",
+  "muy", "CUSTOM",
+  "stay", "CUSTOM",
+  "location", "CUSTOM",
+  "el", "CUSTOM",
+  "es", "CUSTOM",
+  "le", "CUSTOM",
+  "é", "CUSTOM",
+  "很", "CUSTOM",
+  "nos", "CUSTOM",
+  "se", "CUSTOM",
+  "les", "CUSTOM",
+  "wir", "CUSTOM",
+  "haben", "CUSTOM",
+  "die", "CUSTOM"
+  
+)
+
+Binding custom stop words 
+
+stop_words_air <- stop_words %>% 
+  bind_rows(custom_stop_words)
+
+stop_words_air <- stop_words_air %>% 
+  bind_rows(df_names)
+
+
+tidy_comment <- df_comment %>% 
+  group_by(property_type) %>% 
+  mutate(linenumber = row_number()) %>% 
+  ungroup() %>% 
+  unnest_tokens(word, comments) %>%
+  anti_join(stop_words_air)
+
+
+tidy_comment_no_stop <- tidy_comment %>% 
+  anti_join(stop_words_air)
+
+most_comment_words <- tidy_comment_no_stop %>% 
+  count(property_type, word, sort = TRUE )
+
+```
+
+# Correllgram between Property Types
+
+```markdown
+
+#Correlgram
+
+frequency <- tidy_comment%>%
+  anti_join(stop_words_air) %>% 
+  mutate(word=str_extract(word, "[a-z']+")) %>%
+  count(property_type, word) %>%
+  group_by(property_type) %>%
+  mutate(proportion = n/sum(n))%>%
+  select(-n) %>%
+  spread(property_type, proportion) %>%
+  gather(property_type, proportion, `Condominium`, `House`)
+
+#let's plot the correlograms:
+
+library(scales)
+ggplot(frequency, aes(x=proportion, y=`Apartment`, 
+                      color = abs(`Apartment`- proportion)))+
+  geom_abline(color="grey40", lty=2)+
+  geom_jitter(alpha=.1, size=2.5, width=0.3, height=0.3)+
+  geom_text(aes(label=word), check_overlap = TRUE, vjust=1.5) +
+  scale_x_log10(labels = percent_format())+
+  scale_y_log10(labels= percent_format())+
+  scale_color_gradient(limits = c(0,0.001), low = "darkslategray4", high = "gray75")+
+  facet_wrap(~property_type, ncol=2)+
+  theme(legend.position = "none")+
+  labs(y= "Apartment", x=NULL)
+
+```
+
+![Title Image](titleimage.jpg)
 
 
 
